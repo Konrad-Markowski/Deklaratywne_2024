@@ -17,3 +17,12 @@ Jest to relacja na/2.
 Definicja relacji na/2 składa się z 
 
 */
+
+pod(X,Y):-na(Y,X).
+
+%reguły czytamy na odwrót (od prawej do lewej)
+
+/*
+Klocek X leży bezpośrednio pod klockiem Y
+*/
+
