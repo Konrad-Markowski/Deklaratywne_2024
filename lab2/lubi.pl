@@ -16,4 +16,4 @@ lubi(ania, X):- lubi(marta,X), lubi(jan,X).
 
 
 
-
+% rzecz(X) - X jest rzeczą
