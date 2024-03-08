@@ -14,4 +14,5 @@ nie da się uzgodnić zmiennej "a" z g(Y)
 
 
 
-
+W Prologu możemy też napisać cel który sprawdzi czy unifikacja jest możliwa: 
+?- fu(a, X, f(g(Y)))=fu(V,h(Z,V),f(V)).
