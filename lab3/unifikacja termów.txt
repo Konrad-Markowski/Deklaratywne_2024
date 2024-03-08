@@ -1,0 +1,17 @@
+fu(a, X, f(g(Y))
+fu(V, h(Z,V), f(V))
+
+V=a
+fu(a, h(Z,a), f(a))
+fu(a, X, f(g(Y))
+
+X=h(Z,a)
+
+fu(a, h(Z,a), f(g(Y))
+fu(a, h(Z,a), f(a))
+
+nie da się uzgodnić zmiennej "a" z g(Y)
+
+
+
+
