@@ -1,3 +1,5 @@
+P1:
+
 fu(a, X, f(g(Y))
 fu(V, h(Z,V), f(V))
 
@@ -16,3 +18,45 @@ nie da się uzgodnić zmiennej "a" z g(Y)
 
 W Prologu możemy też napisać cel który sprawdzi czy unifikacja jest możliwa: 
 ?- fu(a, X, f(g(Y)))=fu(V,h(Z,V),f(V)).
+
+P2:
+fu(a, X, f(g(Y))  fu(Y, f(Z), f(Z))
+Y=a
+fu(a, X, f(g(a))  fu(a, f(Z), f(Z))
+
+X=f(Z)
+fu(a, f(Z), f(g(a))  fu(a, f(Z), f(Z))
+
+Z=g(a)
+fu(a, f(g(a)), f(g(a))  fu(a, f(g(a)), f(g(a)))
+
+?- fu(a, X, f(g(Y)))=fu(Y,f(Z),f(Z)).
+Tu odpowiedź prologa:
+X = f(g(a)),
+Y = a,
+Z = g(a).
+
+P3:
+fu(f(X), Y, a)  fu(f(g(Y)),c, Z)
+
+X=g(Y)
+fu(f(g(Y)), Y, a)  fu(f(g(Y)),c, Z)
+
+Y=c
+fu(f(g(c)), c, a)  fu(f(g(c)),c, Z)
+
+Z=a
+fu(f(g(c)), c, a)  fu(f(g(c)),c, a)
+
+?- fu(f(X), Y, a) =fu(f(g(Y)),c, Z).
+Odpowiedź Prologa:
+X = g(c),
+Y = c,
+Z = a.
+
+
+
+
+
+
+
