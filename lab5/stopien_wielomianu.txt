@@ -18,9 +18,12 @@ st(W^N)=st(W)*N, gdzie N - liczba naturalna, N > 1
 %spełniony gdy N jest stopniem wielomianu W
 %zmiennej x o współczynnikach liczbowych
 
-st(x,x,1).
+
+st(X,X,1).
+st(C,_,0):-number(C).
 st(-W,X,N):-st(W,X,N).
 st(W1+W2,X,N):-st(W1,X,N1),st(W2,X,N2), N is max(N1,N2).
 st(W1-W2,X,N):-st(W1,X,N1),st(W2,X,N2), N is max(N1,N2).
 st(W1*W2,X,N):-st(W1,X,N1),st(W2,X,N2), N is N1+N2.
-st(W^A,X,N):-integer(A), A>1, st(W,X,N1), N is N1*A.
+st(W^C,X,N):-integer(C), C>1, st(W,X,N1), N is N1*C.
+
