@@ -87,6 +87,17 @@ lista_razy5([H1|T1],[H2|T2]):-
 H2 is H1*5,
 lista_razy5(T1,T2).
 
+%liczba_elem(L,N)- spełniony, gdy N jest liczbą elementów listy L
+
+liczba_elem([],0).
+
+liczba_elem([_|T1],N):-liczba_elem(T1,M), N is M+1.
+
+%element(E,L)-spełniony, gdy E jest elementem listy L
+
+element(E,[E|_]).
+element(E,[_|T]):-element(E,T).
+
 
 
 
