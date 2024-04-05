@@ -95,8 +95,8 @@ liczba_elem([_|T1],N):-liczba_elem(T1,M), N is M+1.
 
 %element(E,L)-spełniony, gdy E jest elementem listy L
 
-element(E,[E|_]).
-element(E,[_|T]):-element(E,T).
+element(E,[E|T]).
+element(E,[H|T]):-element(E,T).
 
 
 
