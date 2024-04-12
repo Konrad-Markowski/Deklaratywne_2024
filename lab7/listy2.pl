@@ -27,3 +27,7 @@ razy2_lista(L1,L2):-maplist(podwojone,L1,L2).
 %kwadrat_lista(L1,L2)
 kwadrat(X,Y):- Y is X*X.
 kwadrat_lista(L1,L2):-maplist(kwadrat,L1,L2).
+
+%lista_mniejsza_o_2(L1,L2)
+mniejsze_o_2(X,Y):- Y is X-2.
+lista_mniejsza_o_2(L1,L2):-maplist(mniejsze_o_2,L1,L2).
