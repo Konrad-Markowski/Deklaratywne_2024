@@ -48,3 +48,8 @@ razy3 x=x*3
 lista_razy3::[Int]->[Int]
 lista_razy3 []=[]
 lista_razy3 (h:t)=(razy3 h):(lista_razy3 t)
+
+--dlugosc_listy
+dlugosc_listy::[Int]->Int
+dlugosc_listy []=0
+dlugosc_listy (h:t)=1+(dlugosc_listy t)
