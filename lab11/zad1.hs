@@ -24,5 +24,13 @@ kwadrat_lista2 xs = map kwadrat xs
 --rekurencyjnie
 lista_wiekszao1_r::[Int]->[Int]
 lista_wiekszao1_r []=[]
-lista_wiekszao1_r (h:t)=(h-1):(lista_wiekszao1_r t)
+lista_wiekszao1_r (h:t)=(h+1):(lista_wiekszao1_r t)
 
+--z kwalifikatorem
+lista_wiekszao1_k::[Int]->[Int]
+lista_wiekszao1_k xs = [x+1 | x<-xs]
+
+--z map
+wiekszeo1 x=x+1
+lista_wiekszao1_m::[Int]->[Int]
+lista_wiekszao1_m xs = map wiekszeo1 xs
